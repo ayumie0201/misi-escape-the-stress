@@ -1,0 +1,107 @@
+<!doctype html><html lang="ms"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MISI: Escape The Stress — UBK Kesuma</title>
+<!-- Versi hosting awam / mesra WhatsApp --><style>
+
+:root{--bg:#071b2d;--card:#102d45;--gold:#ffd166;--cyan:#4dd8e8;--txt:#f7fbff;--muted:#b9d2df;--good:#64e6a2;--bad:#ff7b89}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(circle at top,#174a68,#071b2d 55%);color:var(--txt);min-height:100vh}.wrap{max-width:780px;margin:auto;padding:18px}.top{text-align:center;padding:16px 6px}.badge{display:inline-block;background:#163f59;border:1px solid #2d607a;border-radius:999px;padding:7px 12px;font-size:12px}.title{font-size:clamp(30px,7vw,54px);font-weight:900;margin:12px 0 2px;line-height:.95}.title span{color:var(--gold)}.sub,.tip{color:var(--muted)}.card{background:linear-gradient(145deg,rgba(21,58,83,.97),rgba(10,35,54,.98));border:1px solid #2c5870;border-radius:24px;padding:22px;box-shadow:0 18px 55px #0006;margin-bottom:18px}.hidden{display:none}.center{text-align:center}.emoji{font-size:58px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{text-align:left}.field label{display:block;font-weight:700;margin:4px 0 6px}.field input,.field select{width:100%;padding:13px;border-radius:12px;border:1px solid #477188;background:#092338;color:#fff;font:inherit}.full{grid-column:1/-1}.notice{background:#092338;border-left:4px solid var(--cyan);padding:13px;border-radius:12px;text-align:left;margin:14px 0}.start,.next,.restart{border:0;border-radius:14px;padding:13px 18px;font-weight:800;background:linear-gradient(90deg,var(--gold),#ffb84d);color:#152331;cursor:pointer;margin-top:12px}.meta{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:13px}.progress{height:11px;background:#071a29;border-radius:20px;overflow:hidden;margin:8px 0 18px}.bar{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--gold));transition:.35s}.q{font-size:22px;font-weight:800;line-height:1.25;margin:8px 0 18px}.scenario{background:#092338;border-left:4px solid var(--gold);padding:14px;border-radius:12px;margin:10px 0 18px}.choices{display:grid;gap:10px}.choice{width:100%;text-align:left;background:#123852;color:white;border:1px solid #37647b;border-radius:14px;padding:14px 15px;cursor:pointer;font:inherit}.choice.good{border-color:var(--good);background:#164c43}.choice.bad{border-color:var(--bad);background:#552f3b}.choice:disabled{cursor:default}.feedback{display:none;margin-top:16px;padding:14px;border-radius:14px;background:#071f31}.feedback strong{color:var(--gold)}.scorebig{font-size:52px;font-weight:900;color:var(--gold)}.urgent{border:2px solid #ff9aa5;background:#4a2632;padding:15px;border-radius:14px;margin-top:15px}.ground{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin:15px 0}.ground div{background:#0b2639;border-radius:12px;padding:10px 5px;text-align:center;font-size:12px}.ground b{display:block;font-size:22px;color:var(--cyan)}footer{text-align:center;color:#89a9b9;font-size:12px;padding:10px 0 25px}@media(max-width:600px){.grid{grid-template-columns:1fr}.full{grid-column:auto}.ground{grid-template-columns:1fr}.ground div{text-align:left}.ground b{display:inline;margin-right:8px}.wrap{padding:11px}.card{padding:17px}.q{font-size:19px}}
+
+</style></head><body><div class="wrap"><div class="top"><div class="badge">UNIT BIMBINGAN & KAUNSELING • SMK BANDAR TASIK KESUMA</div><div class="title">MISI: <span>ESCAPE THE STRESS</span></div><div class="sub">Cabaran Minda Sihat Murid Sekolah Menengah • Tenangkan Minda • Urus Emosi • Teruskan Misi</div></div>
+
+<div id="profile" class="card"><div class="center"><div class="emoji">🎮🧠</div><h2>Daftar Ejen Minda</h2><p class="tip">Maklumat ini membantu UBK membuat susulan jika anda meminta bantuan.</p></div><div class="notice"><b>Privasi:</b> Maklumat diberikan kepada Unit Bimbingan dan Kaunseling untuk tujuan sokongan dan susulan. Aktiviti ini bukan diagnosis kesihatan mental.</div><div class="grid"><div class="field full"><label>Nama penuh *</label><input id="name" autocomplete="name"></div><div class="field"><label>Kelas *</label><input id="class" placeholder="Contoh: 3 Zuhrah"></div><div class="field"><label>E-mel murid</label><input id="email" type="email" autocomplete="email"></div><div class="field"><label>No. telefon</label><input id="phone" type="tel" autocomplete="tel"></div></div><div class="center"><button class="start" onclick="toCheckin()">TERUSKAN ➜</button></div></div>
+
+<div id="checkin" class="card hidden"><h2>🌤️ Check-in Minda</h2><p class="tip">Jawab berdasarkan keadaan anda kebelakangan ini. Tiada jawapan betul atau salah.</p><div class="grid"><div class="field"><label>Mood sekarang *</label><select id="mood"><option value="">Pilih…</option><option>😊 Baik / tenang</option><option>🙂 Okey</option><option>😐 Biasa / kosong</option><option>😟 Risau / tertekan</option><option>😢 Sedih / sangat terbeban</option></select></div><div class="field"><label>Tahap tekanan 1–5 *</label><select id="stress"><option value="">Pilih…</option><option value="1">1 — Sangat tenang — Tiada atau hampir tiada tekanan</option><option value="2">2 — Sedikit tertekan — Ada sedikit tekanan, tetapi masih boleh dikawal</option><option value="3">3 — Sederhana — Tekanan mula dirasai dan kadangkala mengganggu</option><option value="4">4 — Tinggi — Tekanan kerap mengganggu emosi, fikiran atau aktiviti harian</option><option value="5">5 — Sangat tinggi — Tekanan terasa sangat berat dan sukar dikendalikan</option></select></div><div class="field full"><label>Adakah masalah terasa sangat sukar untuk anda hadapi sekarang? *</label><select id="hard"><option value="">Pilih…</option><option>Tidak</option><option>Kadang-kadang</option><option>Ya</option></select></div><div class="field full"><label>Adakah anda mempunyai orang dewasa / individu dipercayai untuk bercerita? *</label><select id="trusted"><option value="">Pilih…</option><option>Ya</option><option>Tidak pasti</option><option>Tidak</option></select></div><div class="field full"><label>Adakah anda mahu Guru Bimbingan dan Kaunseling menghubungi anda? *</label><select id="contact"><option value="">Pilih…</option><option>Ya</option><option>Tidak</option><option>Belum pasti</option></select></div></div><div class="notice">Jika anda rasa <b>tidak selamat sekarang</b> atau mungkin mencederakan diri/orang lain, jangan tunggu keputusan permainan. Beritahu ibu bapa/penjaga, guru atau orang dewasa dipercayai dengan segera dan dapatkan bantuan kecemasan setempat jika perlu.</div><div class="center"><button class="start" onclick="startGame()">MULAKAN 8 MISI 🚀</button></div></div>
+
+<div id="game" class="card hidden"><div class="meta"><span id="mission">Misi 1/8</span><span>⭐ Mata: <b id="score">0</b></span></div><div class="progress"><div id="bar" class="bar"></div></div><div id="content"></div></div><div id="result" class="card center hidden"></div><footer>Aktiviti pendidikan kesejahteraan emosi. Keputusan permainan bukan diagnosis. Jika sesuatu isu terasa terlalu berat atau tidak selamat, dapatkan bantuan daripada orang dewasa dipercayai atau Guru Bimbingan dan Kaunseling.</footer></div>
+
+<script>
+
+const qs=[
+
+{t:'Mood Check-In',s:'Pagi PdPR. Anda bangun lambat, internet pula perlahan dan tugasan semalam belum siap. Apa langkah pertama yang paling membantu?',a:['Terus marah semua orang dalam group kelas.','Berhenti sekejap, kenal pasti emosi dan pilih satu tugasan paling penting untuk dimulakan.','Tutup telefon dan abaikan semua kelas hari ini.'],c:1,f:'Kenal pasti emosi dahulu. Bila fikiran kurang berserabut, kita lebih mudah menentukan langkah seterusnya.'},
+
+{t:'Stress Detective',s:'Anda rasa jantung laju dan fikiran asyik berkata, “Aku tak sempat!” apabila melihat banyak tugasan.',a:['Anggap diri memang malas dan tak berguna.','Senaraikan tugasan, tandakan yang paling segera, kemudian pecahkan kepada langkah kecil.','Buat semuanya serentak supaya cepat habis.'],c:1,f:'Memecahkan tugasan besar kepada langkah kecil boleh menjadikan beban terasa lebih terkawal.'},
+
+{t:'Thought Battle',s:'Anda mendapat markah ujian lebih rendah daripada kawan. Fikiran automatik: “Aku memang bodoh.” Pilih pemikiran yang lebih realistik.',a:['“Aku tak akan berjaya sampai bila-bila.”','“Markah ini menunjukkan bahagian yang aku perlu baiki. Aku boleh ubah strategi belajar.”','“Semua salah cikgu dan soalan.”'],c:1,f:'Pemikiran realistik mengakui masalah sambil membuka ruang untuk tindakan.'},
+
+{t:'Social Media Trap',s:'Anda nampak story kawan-kawan sedang seronok. Anda tidak dijemput dan mula rasa diri tidak disukai.',a:['Post sindiran supaya mereka terasa.','Berhenti membuat kesimpulan, tenangkan diri dan bercakap dengan seseorang yang dipercayai jika masih terganggu.','Scroll akaun mereka berjam-jam untuk mencari bukti.'],c:1,f:'Apa yang kita nampak di media sosial hanyalah sebahagian kecil cerita.'},
+
+{t:'5-4-3-2-1 Grounding',s:'Sebelum pembentangan online, anda sangat berdebar. Teknik grounding manakah paling tepat?',a:['5 benda dilihat, 4 disentuh/dirasa, 3 didengar, 2 dihidu, 1 dirasa/dikecapi.','Kira markah peperiksaan lima kali.','Baca semua mesej WhatsApp secepat mungkin.'],c:0,f:'Grounding membawa perhatian kembali kepada deria dan keadaan sekarang.',special:true},
+
+{t:'Conflict Mode',s:'Kawan menghantar mesej yang membuat anda terasa hati. Anda sangat marah.',a:['Balas segera dengan ayat paling pedas.','Screenshot dan viralkan.','Tangguh respons seketika, tenangkan diri, kemudian tanya maksudnya dengan jelas dan sopan.'],c:2,f:'Memberi sedikit ruang sebelum bertindak boleh mengelakkan konflik menjadi lebih besar.'},
+
+{t:'Recharge',s:'Anda sudah belajar lama dan langsung tidak boleh fokus. Apa pilihan yang lebih sihat?',a:['Paksa diri tanpa berhenti sampai tengah malam.','Ambil rehat pendek: minum air, regangkan badan, jauhkan skrin seketika, kemudian sambung mengikut keutamaan.','Main game tanpa had dan tinggalkan semua kerja.'],c:1,f:'Rehat yang disengajakan berbeza daripada mengelak.'},
+
+{t:'FINAL BOSS: Minta Bantuan',s:'Sejak beberapa hari, masalah terasa terlalu berat dan mengganggu pembelajaran. Anda sudah cuba menguruskannya tetapi masih sukar.',a:['Simpan semuanya kerana meminta bantuan bermaksud lemah.','Cari orang dewasa yang dipercayai—contohnya ibu bapa/penjaga, guru atau Guru Bimbingan dan Kaunseling—dan beritahu apa yang sedang berlaku.','Berpura-pura semuanya baik supaya tiada siapa tahu.'],c:1,f:'Meminta sokongan ialah satu kemahiran. Kita tidak perlu menyelesaikan semua perkara seorang diri.'}
+
+];let i=0,score=0,locked=false; let keputusanAkhir=null;
+
+function v(id){return document.getElementById(id).value.trim()}
+
+function toCheckin(){if(!v('name')||!v('class'))return alert('Sila isi nama penuh dan kelas.');document.getElementById('profile').classList.add('hidden');document.getElementById('checkin').classList.remove('hidden');scrollTo(0,0)}
+
+function startGame(){if(!v('mood')||!v('stress')||!v('hard')||!v('trusted')||!v('contact'))return alert('Sila lengkapkan semua soalan Check-in Minda.');document.getElementById('checkin').classList.add('hidden');document.getElementById('game').classList.remove('hidden');render();scrollTo(0,0)}
+
+function render(){locked=false;let q=qs[i];document.getElementById('mission').textContent=`Misi ${i+1}/${qs.length} • ${q.t}`;document.getElementById('score').textContent=score;document.getElementById('bar').style.width=(i/qs.length*100)+'%';let sp=q.special?`<div class='ground'><div><b>5</b>LIHAT</div><div><b>4</b>SENTUH/RASA</div><div><b>3</b>DENGAR</div><div><b>2</b>HIDU</div><div><b>1</b>KECAP</div></div>`:'';document.getElementById('content').innerHTML=`<div class='q'>${q.t}</div><div class='scenario'>${q.s}</div>${sp}<div class='choices'>${q.a.map((x,j)=>`<button class='choice' onclick='pick(${j})'>${String.fromCharCode(65+j)}. ${x}</button>`).join('')}</div><div id='fb' class='feedback'></div>`}
+
+function pick(j){if(locked)return;locked=true;let q=qs[i],ok=j===q.c;if(ok)score+=12.5;document.querySelectorAll('.choice').forEach((b,k)=>{b.disabled=true;if(k===q.c)b.classList.add('good');else if(k===j)b.classList.add('bad')});let fb=document.getElementById('fb');fb.style.display='block';fb.innerHTML=`<strong>${ok?'✅ Pilihan membantu! +12.5 mata':'💡 Cuba fikir semula'}</strong><br>${q.f}<br><button class='next' onclick='next()'>${i===qs.length-1?'LIHAT KEPUTUSAN 🏆':'MISI SETERUSNYA ➜'}</button>`;document.getElementById('score').textContent=score}
+
+function next(){i++;if(i<qs.length)render();else finish();scrollTo(0,0)}
+
+function internalFlag(){let stress=+v('stress'),hard=v('hard'),trusted=v('trusted'),contact=v('contact');if(contact==='Ya'||stress===5||(hard==='Ya'&&trusted==='Tidak'))return ['PERLU SUSULAN','Keutamaan'];if(stress>=4||hard==='Ya'||trusted==='Tidak'||contact==='Belum pasti')return ['PERLU PERHATIAN','Perhatian'];return ['PEMANTAUAN BIASA','Biasa']}
+
+function finish(){document.getElementById('game').classList.add('hidden');document.getElementById('result').classList.remove('hidden');let rank=score>=87.5?['🏆','WIRA MINDA SIHAT','Hebat! Anda menunjukkan pilihan pengurusan emosi yang sangat baik.']:score>=62.5?['🥇','MINDA CHAMPION','Bagus! Asas anda kuat. Terus latih kemahiran mengurus tekanan.']:score>=37.5?['🥈','MINDA WARRIOR','Anda sedang membina kemahiran. Ingat: kemahiran emosi boleh dilatih.']:['🥉','MINDA EXPLORER','Ini permulaan yang baik. Cuba semula dan perhatikan mengapa sesuatu pilihan lebih membantu.'];let flag=internalFlag(),support=(v('contact')==='Ya'||flag[1]==='Keutamaan')?`<div class='urgent'><b>💬 Anda tidak perlu hadapi semuanya seorang diri.</b><br>Beritahu orang dewasa yang dipercayai atau hubungi Guru Bimbingan dan Kaunseling. Jika anda rasa tidak selamat sekarang, dapatkan bantuan segera daripada orang dewasa berdekatan/perkhidmatan kecemasan setempat.</div>`:'';let data={timestamp:new Date().toISOString(),name:v('name'),class:v('class'),email:v('email'),phone:v('phone'),score,rank:rank[1],mood:v('mood'),stress:v('stress'),hard:v('hard'),trusted:v('trusted'),contact:v('contact'),indicator:flag[0],priority:flag[1]};keputusanAkhir=data;document.getElementById('result').innerHTML=`<div class='emoji'>${rank[0]}</div><h2>MISI SELESAI!</h2><div class='scorebig'>${score}/100</div><h2>${rank[1]}</h2><p>${rank[2]}</p><p><b>Kemahiran utama:</b><br>Kenal emosi → berhenti seketika → pilih tindakan membantu → minta sokongan apabila perlu.</p>${support}<div class='notice'>Untuk menghantar keputusan kepada Unit Bimbingan dan Kaunseling, tekan butang di bawah. Pastikan mesej <b>Berjaya dihantar</b> dipaparkan sebelum menutup halaman.</div><button id='btnHantar' class='next' onclick='hantarKeGoogleSheet()'>HANTAR KEPUTUSAN KEPADA UBK 📩</button><p id='statusHantar' role='status' aria-live='polite'></p><button class='restart' onclick='location.reload()'>MAIN SEMULA 🔁</button>`}
+
+
+
+let penghantaranSelesai = false;
+const DATA_UBK_URL = 'https://script.google.com/macros/s/AKfycbzzlHuDnSt1QZBMMFehEMVpmhA2nBgOjw8MRxw1duNprUxDRg_jQIH7103NV5WknODa3w/exec';
+
+function hantarKeGoogleSheet() {
+  if (penghantaranSelesai) return;
+
+  const btn = document.getElementById('btnHantar');
+  const status = document.getElementById('statusHantar');
+  const d = keputusanAkhir;
+
+  if (!d) {
+    status.textContent = 'Keputusan tidak ditemui. Sila mulakan permainan semula.';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Sedang menghantar…';
+  status.textContent = 'Sila tunggu. Keputusan sedang dihantar.';
+
+  const payload = new URLSearchParams({
+    nama: d.name,
+    kelas: d.class,
+    email: d.email,
+    telefon: d.phone,
+    skorGame: String(d.score),
+    tahapGame: d.rank,
+    mood: d.mood,
+    tahapTekanan: d.stress,
+    sukarMenghadapi: d.hard,
+    adaOrangDipercayai: d.trusted,
+    mahuDihubungi: d.contact
+  });
+
+  fetch(DATA_UBK_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+    },
+    body: payload.toString()
+  })
+  .then(function() {
+    penghantaranSelesai = true;
+    btn.textContent = 'PENGHANTARAN SELESAI ✓';
+    status.textContent = '✅ Penghantaran telah dibuat. Terima kasih kerana menjawab dengan jujur.';
+  })
+  .catch(function() {
+    btn.disabled = false;
+    btn.textContent = 'CUBA HANTAR SEMULA';
+    status.textContent = '⚠️ Sambungan gagal. Semak Internet dan cuba hantar semula.';
+  });
+}
+
+</script></body></html>
